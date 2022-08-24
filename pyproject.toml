@@ -13,6 +13,9 @@ googleapis-common-protos = "^1.56.4"
 [tool.poetry.dev-dependencies]
 grpcio-tools = "^1.48.0"
 
+[tool.poetry.scripts]
+build = 'cosmos_sdk.build:main'
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
