@@ -9,5 +9,6 @@ git submodule update --init --recursive
 
 poetry install
 python -m cosmos_sdk.build
-python examples/query_all_balances.py
+
+python examples/query_all_balances.py <COSMOSHUB_GRPC_ENDPOINT> # prints Binance validator balance
 ```

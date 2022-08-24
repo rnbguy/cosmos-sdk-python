@@ -1,4 +1,5 @@
 import json
+from argparse import ArgumentParser
 
 import grpc
 from google.protobuf.json_format import MessageToDict, ParseDict
@@ -6,7 +7,12 @@ from google.protobuf.json_format import MessageToDict, ParseDict
 from cosmos.bank.v1beta1.query_pb2 import QueryAllBalancesRequest
 from cosmos.bank.v1beta1.query_pb2_grpc import QueryStub
 
-endpoint = ":9090"
+parser = ArgumentParser()
+parser.add_argument("grpc_endpoint")
+
+args = parser.parse_args()
+
+endpoint = args.grpc_endpoint
 
 # Binance validator address balance
 json_payload = {"address": "cosmos156gqf9837u7d4c4678yt3rl4ls9c5vuuxyhkw6"}
