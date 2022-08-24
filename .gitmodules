@@ -7,3 +7,6 @@
 [submodule "third_party/gogoproto"]
 	path = third_party/gogoproto
 	url = git@github.com:cosmos/gogoproto
+[submodule "third_party/googleapis"]
+	path = third_party/googleapis
+	url = git@github.com:googleapis/googleapis
